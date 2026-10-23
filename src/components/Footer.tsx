@@ -145,14 +145,19 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-400 transition-colors">
-                  Terms of Devotional Seva
-                </a>
+                <Link href="/terms" className="hover:text-orange-400 transition-colors">
+                  Terms & Conditions
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-400 transition-colors">
-                  Privacy & Dakshina Policy
-                </a>
+                <Link href="/privacy" className="hover:text-orange-400 transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/refund-policy" className="hover:text-orange-400 transition-colors">
+                  Refund & Cancellation Policy
+                </Link>
               </li>
             </ul>
           </div>
