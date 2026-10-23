@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-saffron: #FF6B00;
+    --primary-saffron-dark: #D95A00;
+    --primary-saffron-light: #FFF4EC;
+    --sacred-crimson: #991B1B;
+    --sacred-gold: #D97706;
+    --sacred-gold-light: #FEF3C7;
+    --marigold: #F59E0B;
+    --spiritual-cream: #FFFDF9;
+    --spiritual-stone: #FAF5EE;
+    --spiritual-dark: #1F1713;
+    --spiritual-muted: #574B44;
+    --spiritual-border: #F0E5D8;
+  }
+
+  body {
+    background-color: var(--spiritual-cream);
+    color: var(--spiritual-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Devotional Accents & Gradients */
+.bg-gradient-saffron {
+  background: linear-gradient(135deg, #FF7A1A 0%, #EA580C 50%, #C2410C 100%);
+}
+
+.bg-gradient-saffron-warm {
+  background: linear-gradient(180deg, #FFF7ED 0%, #FFFDF9 100%);
+}
+
+.bg-gradient-sacred-gold {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.bg-gradient-hero {
+  background: radial-gradient(circle at 50% 20%, #FEF3C7 0%, #FFF7ED 45%, #FFFDF9 100%);
+}
+
+.border-spiritual {
+  border-color: #EFE4D6;
+}
+
+.shadow-spiritual {
+  box-shadow: 0 4px 20px -2px rgba(234, 88, 12, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-spiritual-hover:hover {
+  box-shadow: 0 12px 30px -4px rgba(234, 88, 12, 0.2), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+}
+
+.text-saffron {
+  color: #EA580C;
+}
+
+.text-saffron-dark {
+  color: #C2410C;
+}
+
+.border-saffron {
+  border-color: #EA580C;
+}
+
+/* Subtle Diya / Spiritual Glow */
+@keyframes flame-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px rgba(255, 107, 0, 0.6));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 160, 20, 0.9));
+  }
+}
+
+.animate-diya {
+  animation: flame-pulse 2.5s infinite ease-in-out;
+}
+
+/* Temple Bell (घंटी) Natural Swing Animation */
+@keyframes bell-swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(18deg);
+  }
+  40% {
+    transform: rotate(-14deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-bell-ring {
+  transform-origin: top center;
+  animation: bell-swing 1.2s ease-in-out;
+}
+
+.animate-bell-gentle {
+  transform-origin: top center;
+  animation: bell-swing 3.5s infinite ease-in-out;
+}
+
+/* Divine Golden Shimmer Sweep for Buttons */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%, 100% {
+    transform: translateX(180%);
+  }
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 80%
+  );
+  animation: shimmer-sweep 3.5s infinite linear;
+  pointer-events: none;
+}
+
+/* Divine Aura Halo Pulse */
+@keyframes aura-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px 6px rgba(245, 158, 11, 0.45);
+  }
+}
+
+.animate-aura {
+  animation: aura-pulse 3s infinite ease-in-out;
+}
+
+/* Gentle Floating Animation */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for Indian Devotional Aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF7ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FDBA74;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FB923C;
+}
