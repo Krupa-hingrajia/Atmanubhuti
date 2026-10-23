@@ -53,7 +53,7 @@ gcloud run deploy "$SERVICE_NAME" \
     --platform managed \
     --region "$REGION" \
     --allow-unauthenticated \
-    --set-env-vars NODE_ENV=production,AUTH_SECRET=atmanubhuti_sacred_secret_key_89218931289 \
+    --set-env-vars NODE_ENV=production,AUTH_SECRET=atmanubhuti_sacred_secret_key_89218931289,NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_test_TrKzUxaKEdPyrq,RAZORPAY_KEY_ID=rzp_test_TrKzUxaKEdPyrq,RAZORPAY_KEY_SECRET=JCE2nV43zXXymE1xib83WUQi \
     --memory 512Mi \
     --cpu 1 \
     --min-instances 0 \

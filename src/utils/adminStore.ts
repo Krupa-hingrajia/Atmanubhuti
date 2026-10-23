@@ -3,6 +3,7 @@ import { PUJAS_DATA, TEMPLES_DATA, Puja, Temple, PujaPackage } from "@/data/puja
 export type BookingStatus =
   | "PENDING"
   | "ACCEPTED"
+  | "CONFIRMED"
   | "PANDIT_ASSIGNED"
   | "PUJA_PERFORMED"
   | "MEDIA_SENT"
@@ -32,6 +33,8 @@ export interface AdminBooking {
   } | null;
   status: BookingStatus;
   paymentStatus: "PAID" | "PENDING" | "REFUNDED";
+  paymentId?: string;
+  orderId?: string;
   createdAt: string;
   sankalpDate: string;
   assignedPandit?: {

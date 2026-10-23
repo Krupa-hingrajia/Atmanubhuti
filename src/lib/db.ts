@@ -444,8 +444,10 @@ class DatabaseEngine {
       whatsappNumber: data.whatsappNumber || "+91 9876543210",
       includePrasadDelivery: Boolean(data.includePrasadDelivery),
       shippingAddress: data.shippingAddress || null,
-      status: "PENDING",
-      paymentStatus: "PAID",
+      status: data.status || "PENDING",
+      paymentStatus: data.paymentStatus || "PAID",
+      paymentId: data.paymentId,
+      orderId: data.orderId,
       createdAt: new Date().toISOString(),
       sankalpDate: data.sankalpDate || "Upcoming Auspicious Muhurat",
       prasadTracking: data.includePrasadDelivery
